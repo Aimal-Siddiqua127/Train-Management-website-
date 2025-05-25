@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainEase - My Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><i class="fas fa-train"></i> TrainEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedules</a></li>
+                <li><a href="booking.html">Book Tickets</a></li>
+                <li><a href="my-tickets.html" class="active">My Tickets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="complaints.html">Complaints</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>My Tickets</h1>
+        <p>Manage your bookings and view your tickets</p>
+    </section>
+
+    <section class="tickets-container">
+        <div class="tickets-filter">
+            <div class="filter-group">
+                <label for="ticket-status">Filter by Status:</label>
+                <select id="ticket-status">
+                    <option value="all">All Tickets</option>
+                    <option value="upcoming">Upcoming</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="ticket-date">Filter by Date:</label>
+                <input type="date" id="ticket-date">
+            </div>
+            <button class="btn btn-secondary">Apply Filters</button>
+        </div>
+
+        <div class="tickets-list">
+            <div class="ticket-card upcoming">
+                <div class="ticket-status">
+                    <span class="status-badge upcoming">Upcoming</span>
+                    <div class="ticket-actions-dropdown">
+                        <button class="dropdown-toggle"><i class="fas fa-ellipsis-v"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item"><i class="fas fa-download"></i> Download</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-print"></i> Print</a>
+                            <a href="#" class="dropdown-item change-ticket"><i class="fas fa-exchange-alt"></i> Change</a>
+                            <a href="#" class="dropdown-item cancel-ticket"><i class="fas fa-times"></i> Cancel</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-header">
+                    <div class="ticket-train">
+                        <h3>Express 101</h3>
+                        <span class="train-type express">Express</span>
+                    </div>
+                    <div class="ticket-reference">
+                        <span>Booking Ref: TE-12345678</span>
+                    </div>
+                </div>
+                <div class="ticket-details">
+                    <div class="ticket-journey">
+                        <div class="departure">
+                            <p class="time">08:00 AM</p>
+                            <p class="station">New York</p>
+                            <p class="date">May 18, 2025</p>
+                        </div>
+                        <div class="journey-line">
+                            <span class="duration">4h 30m</span>
+                        </div>
+                        <div class="arrival">
+                            <p class="time">12:30 PM</p>
+                            <p class="station">Boston</p>
+                            <p class="date">May 18, 2025</p>
+                        </div>
+                    </div>
+                    <div class="ticket-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span>John Doe</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-chair"></i>
+                            <span>Seat: 2A</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-tag"></i>
+                            <span>$45.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-footer">
+                    <div class="cancellation-info">
+                        <div class="countdown" id="cancellation-countdown-1">
+                            <span>59:59</span> remaining for free cancellation
+                        </div>
+                    </div>
+                    <div class="ticket-buttons">
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-qrcode"></i> View QR Code</a>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-info-circle"></i> Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ticket-card completed">
+                <div class="ticket-status">
+                    <span class="status-badge completed">Completed</span>
+                    <div class="ticket-actions-dropdown">
+                        <button class="dropdown-toggle"><i class="fas fa-ellipsis-v"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item"><i class="fas fa-download"></i> Download</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-print"></i> Print</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-star"></i> Rate Journey</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-header">
+                    <div class="ticket-train">
+                        <h3>Regional 203</h3>
+                        <span class="train-type regular">Regular</span>
+                    </div>
+                    <div class="ticket-reference">
+                        <span>Booking Ref: TE-87654321</span>
+                    </div>
+                </div>
+                <div class="ticket-details">
+                    <div class="ticket-journey">
+                        <div class="departure">
+                            <p class="time">10:15 AM</p>
+                            <p class="station">Boston</p>
+                            <p class="date">May 10, 2025</p>
+                        </div>
+                        <div class="journey-line">
+                            <span class="duration">5h 45m</span>
+                        </div>
+                        <div class="arrival">
+                            <p class="time">04:00 PM</p>
+                            <p class="station">New York</p>
+                            <p class="date">May 10, 2025</p>
+                        </div>
+                    </div>
+                    <div class="ticket-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span>John Doe</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-chair"></i>
+                            <span>Seat: 15C</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-tag"></i>
+                            <span>$35.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-footer">
+                    <div class="ticket-buttons">
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-receipt"></i> Invoice</a>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-info-circle"></i> Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ticket-card cancelled">
+                <div class="ticket-status">
+                    <span class="status-badge cancelled">Cancelled</span>
+                    <div class="ticket-actions-dropdown">
+                        <button class="dropdown-toggle"><i class="fas fa-ellipsis-v"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item"><i class="fas fa-download"></i> Download</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-print"></i> Print</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-redo"></i> Book Again</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-header">
+                    <div class="ticket-train">
+                        <h3>Express 105</h3>
+                        <span class="train-type express">Express</span>
+                    </div>
+                    <div class="ticket-reference">
+                        <span>Booking Ref: TE-24681357</span>
+                    </div>
+                </div>
+                <div class="ticket-details">
+                    <div class="ticket-journey">
+                        <div class="departure">
+                            <p class="time">02:30 PM</p>
+                            <p class="station">New York</p>
+                            <p class="date">May 5, 2025</p>
+                        </div>
+                        <div class="journey-line">
+                            <span class="duration">4h 15m</span>
+                        </div>
+                        <div class="arrival">
+                            <p class="time">06:45 PM</p>
+                            <p class="station">Boston</p>
+                            <p class="date">May 5, 2025</p>
+                        </div>
+                    </div>
+                    <div class="ticket-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span>John Doe</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-chair"></i>
+                            <span>Seat: 7B</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-tag"></i>
+                            <span>$55.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ticket-footer">
+                    <div class="cancellation-info">
+                        <p>Cancelled on: May 4, 2025 at 3:15 PM</p>
+                        <p>Refund Status: <span class="refund-status completed">Completed</span></p>
+                    </div>
+                    <div class="ticket-buttons">
+                        <a href="#" class="btn btn-primary"><i class="fas fa-info-circle"></i> Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </section>
+
+    <section class="ticket-modals">
+        <!-- Change Ticket Modal -->
+        <div class="modal" id="change-ticket-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Change Ticket</h2>
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="current-ticket-info">
+                        <h3>Current Ticket</h3>
+                        <div class="ticket-summary">
+                            <div class="summary-item">
+                                <span>Train</span>
+                                <span>Express 101</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Date</span>
+                                <span>May 18, 2025</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Time</span>
+                                <span>08:00 AM - 12:30 PM</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Seat</span>
+                                <span>2A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="change-options">
+                        <h3>Change Options</h3>
+                        <form id="change-ticket-form">
+                            <div class="form-group">
+                                <label for="change-type">What would you like to change?</label>
+                                <select id="change-type">
+                                    <option value="date">Date/Time</option>
+                                    <option value="seat">Seat</option>
+                                    <option value="passenger">Passenger Information</option>
+                                </select>
+                            </div>
+
+                            <div class="change-date-options">
+                                <div class="form-group">
+                                    <label for="new-date">New Date</label>
+                                    <input type="date" id="new-date">
+                                </div>
+                                <div class="available-trains">
+                                    <h4>Available Trains</h4>
+                                    <div class="train-option">
+                                        <input type="radio" name="new-train" id="train-1" checked>
+                                        <label for="train-1">
+                                            <div class="train-option-details">
+                                                <span class="train-name">Express 101</span>
+                                                <span class="train-time">08:00 AM - 12:30 PM</span>
+                                            </div>
+                                            <span class="price-difference">No additional charge</span>
+                                        </label>
+                                    </div>
+                                    <div class="train-option">
+                                        <input type="radio" name="new-train" id="train-2">
+                                        <label for="train-2">
+                                            <div class="train-option-details">
+                                                <span class="train-name">Express 105</span>
+                                                <span class="train-time">02:30 PM - 06:45 PM</span>
+                                            </div>
+                                            <span class="price-difference">+$10.00</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="change-summary">
+                        <div class="summary-item">
+                            <span>Change Fee</span>
+                            <span>$0.00</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Price Difference</span>
+                            <span>$0.00</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total</span>
+                            <span>$0.00</span>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-secondary close-modal">Cancel</button>
+                        <button class="btn btn-primary">Confirm Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cancel Ticket Modal -->
+        <div class="modal" id="cancel-ticket-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Cancel Ticket</h2>
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="current-ticket-info">
+                        <h3>Ticket Details</h3>
+                        <div class="ticket-summary">
+                            <div class="summary-item">
+                                <span>Train</span>
+                                <span>Express 101</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Date</span>
+                                <span>May 18, 2025</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Time</span>
+                                <span>08:00 AM - 12:30 PM</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Route</span>
+                                <span>New York to Boston</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Seat</span>
+                                <span>2A</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Passenger</span>
+                                <span>John Doe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cancellation-info">
+                        <div class="cancellation-policy">
+                            <h3>Cancellation Policy</h3>
+                            <p>You can cancel your ticket within the first hour of booking without any charges.</p>
+                            <div class="countdown" id="modal-cancellation-countdown">
+                                <span>59:59</span> remaining for free cancellation
+                            </div>
+                        </div>
+                        <div class="refund-info">
+                            <h3>Refund Information</h3>
+                            <p>Your refund will be processed to the original payment method within 3-5 business days.</p>
+                            <div class="refund-amount">
+                                <span>Ticket Price</span>
+                                <span>$45.00</span>
+                            </div>
+                            <div class="refund-amount">
+                                <span>Cancellation Fee</span>
+                                <span>$0.00</span>
+                            </div>
+                            <div class="refund-amount total">
+                                <span>Total Refund</span>
+                                <span>$45.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cancellation-reason">
+                        <h3>Reason for Cancellation (Optional)</h3>
+                        <select id="cancellation-reason">
+                            <option value="">Select a reason</option>
+                            <option value="change-plans">Change of Plans</option>
+                            <option value="better-option">Found a Better Option</option>
+                            <option value="emergency">Emergency</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <textarea id="cancellation-comments" placeholder="Additional comments..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-actions">
+                        <button class="btn btn-secondary close-modal">Keep My Ticket</button>
+                        <button class="btn btn-danger">Confirm Cancellation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TrainEase</h3>
+                <p>Making train travel easy and convenient for everyone.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedules</a></li>
+                    <li><a href="booking.html">Book Tickets</a></li>
+                    <li><a href="my-tickets.html">My Tickets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="complaints.html">Complaints</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Train Station Rd, City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@trainease.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TrainEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

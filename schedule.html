@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainEase - Schedules</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><i class="fas fa-train"></i> TrainEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html" class="active">Schedules</a></li>
+                <li><a href="booking.html">Book Tickets</a></li>
+                <li><a href="my-tickets.html">My Tickets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="complaints.html">Complaints</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Train Schedules</h1>
+        <p>Find the perfect train for your journey</p>
+    </section>
+
+    <section class="schedule-search">
+        <div class="search-container">
+            <form id="schedule-search-form">
+                <div class="form-group">
+                    <label for="departure">From</label>
+                    <select id="departure" required>
+                        <option value="">Select departure station</option>
+                        <option value="new-york">New York</option>
+                        <option value="boston">Boston</option>
+                        <option value="chicago">Chicago</option>
+                        <option value="detroit">Detroit</option>
+                        <option value="los-angeles">Los Angeles</option>
+                        <option value="san-francisco">San Francisco</option>
+                        <option value="washington">Washington D.C.</option>
+                        <option value="philadelphia">Philadelphia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="arrival">To</label>
+                    <select id="arrival" required>
+                        <option value="">Select arrival station</option>
+                        <option value="new-york">New York</option>
+                        <option value="boston">Boston</option>
+                        <option value="chicago">Chicago</option>
+                        <option value="detroit">Detroit</option>
+                        <option value="los-angeles">Los Angeles</option>
+                        <option value="san-francisco">San Francisco</option>
+                        <option value="washington">Washington D.C.</option>
+                        <option value="philadelphia">Philadelphia</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Search Trains</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="schedule-results">
+        <h2>Available Trains</h2>
+        <div class="filter-options">
+            <div class="filter">
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                    <option value="departure">Departure Time</option>
+                    <option value="duration">Duration</option>
+                    <option value="price">Price</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="train-type">Train Type:</label>
+                <select id="train-type">
+                    <option value="all">All Types</option>
+                    <option value="express">Express</option>
+                    <option value="regular">Regular</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="train-list">
+            <div class="train-card">
+                <div class="train-header">
+                    <div class="train-name">
+                        <h3>Express 101</h3>
+                        <span class="train-type express">Express</span>
+                    </div>
+                    <div class="train-price">$45</div>
+                </div>
+                <div class="train-details">
+                    <div class="train-stations">
+                        <div class="departure">
+                            <p class="time">08:00 AM</p>
+                            <p class="station">New York</p>
+                            <p class="date">May 18, 2025</p>
+                        </div>
+                        <div class="journey-line">
+                            <span class="duration">4h 30m</span>
+                        </div>
+                        <div class="arrival">
+                            <p class="time">12:30 PM</p>
+                            <p class="station">Boston</p>
+                            <p class="date">May 18, 2025</p>
+                        </div>
+                    </div>
+                    <div class="train-info">
+                        <div class="info-item">
+                            <i class="fas fa-chair"></i>
+                            <span>42 seats available</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>Free Wi-Fi</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Dining Car</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="train-actions">
+                    <a href="train-details.html?id=101" class="btn btn-secondary">View Details</a>
+                    <a href="booking.html?train=101" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+            <div class="train-card">
+                <div class="train-header">
+                    <div class="train-name">
+                        <h3>Regional 203</h3>
+                        <span class="train-type regular">Regular</span>
+                    </div>
+                    <div class="train-price">$35</div>
+                </div>
+                <div class="train-details">
+                    <div class="train-stations">
+                        <div class="departure">
+                            <p class="time">10:15 AM</p>
+                            <p class="station">New York</p>
+                            <p class="date">May 18, 2025</p>
+                        </div>
+                        <div class="journey-line">
+                            <span class="duration">5h 45m</span>
+                        </div>
+                        <div class="arrival">
+                            <p class="time">04:00 PM</p>
+                            <p class="station">Boston</p>
+                            <p class="date">May 18, 2025</p>
+                        </div>
+                    </div>
+                    <div class="train-info">
+                        <div class="info-item">
+                            <i class="fas fa-chair"></i>
+                            <span>78 seats available</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>Free Wi-Fi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="train-actions">
+                    <a href="train-details.html?id=203" class="btn btn-secondary">View Details</a>
+                    <a href="booking.html?train=203" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+
+            <div class="train-card">
+                <div class="train-header">
+                    <div class="train-name">
+                        <h3>Express 105</h3>
+                        <span class="train-type express">Express</span>
+                    </div>
+                    <div class="train-price">$55</div>
+                </div>
+                <div class="train-details">
+                    <div class="train-stations">
+                        <div class="departure">
+                            <p class="time">02:30 PM</p>
+                            <p class="station">New York</p>
+                            <p class="date">May 18, 2025</p>
+                        </div>
+                        <div class="journey-line">
+                            <span class="duration">4h 15m</span>
+                        </div>
+                        <div class="arrival">
+                            <p class="time">06:45 PM</p>
+                            <p class="station">Boston</p>
+                            <p class="date">May 18, 2025</p>
+                        </div>
+                    </div>
+                    <div class="train-info">
+                        <div class="info-item">
+                            <i class="fas fa-chair"></i>
+                            <span>23 seats available</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>Free Wi-Fi</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Dining Car</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="train-actions">
+                    <a href="train-details.html?id=105" class="btn btn-secondary">View Details</a>
+                    <a href="booking.html?train=105" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TrainEase</h3>
+                <p>Making train travel easy and convenient for everyone.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedules</a></li>
+                    <li><a href="booking.html">Book Tickets</a></li>
+                    <li><a href="my-tickets.html">My Tickets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="complaints.html">Complaints</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Train Station Rd, City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@trainease.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TrainEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

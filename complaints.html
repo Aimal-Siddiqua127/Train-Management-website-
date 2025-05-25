@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainEase - Complaints</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><i class="fas fa-train"></i> TrainEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedules</a></li>
+                <li><a href="booking.html">Book Tickets</a></li>
+                <li><a href="my-tickets.html">My Tickets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="complaints.html" class="active">Complaints</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Complaints & Feedback</h1>
+        <p>We value your feedback to improve our services</p>
+    </section>
+
+    <section class="complaints-container">
+        <div class="complaints-intro">
+            <div class="intro-content">
+                <h2>We're Listening</h2>
+                <p>At TrainEase, we are committed to providing the best possible service to our customers. We understand that sometimes things don't go as planned, and we want to hear about your experience so we can make it right.</p>
+                <p>Your feedback helps us improve our services and address any issues promptly. We take all complaints seriously and aim to resolve them as quickly as possible.</p>
+            </div>
+            <div class="intro-image">
+                <img src="C:\Users\aimal\OneDrive\Dokumente\projects\web (train booking)\images\complaint-removebg-preview.png" alt="Customer Service">
+            </div>
+        </div>
+
+        <div class="complaint-types">
+            <div class="complaint-type-card">
+                <div class="complaint-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Delay Compensation</h3>
+                <p>If your train was delayed by more than 30 minutes, you may be eligible for compensation.</p>
+                <a href="#delay-form" class="btn btn-secondary">File Claim</a>
+            </div>
+            <div class="complaint-type-card">
+                <div class="complaint-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h3>Service Complaint</h3>
+                <p>Report issues with our service, staff, or facilities to help us improve.</p>
+                <a href="#complaint-form" class="btn btn-secondary">File Complaint</a>
+            </div>
+            <div class="complaint-type-card">
+                <div class="complaint-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Suggestions</h3>
+                <p>Share your ideas on how we can enhance your travel experience with us.</p>
+                <a href="#suggestion-form" class="btn btn-secondary">Submit Suggestion</a>
+            </div>
+            <div class="complaint-type-card">
+                <div class="complaint-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Compliments</h3>
+                <p>Let us know if a staff member provided exceptional service that deserves recognition.</p>
+                <a href="#compliment-form" class="btn btn-secondary">Send Compliment</a>
+            </div>
+        </div>
+
+        <div class="complaint-form-container" id="complaint-form">
+            <h2>File a Complaint</h2>
+            <form class="complaint-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="complaint-name">Full Name</label>
+                        <input type="text" id="complaint-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="complaint-email">Email</label>
+                        <input type="email" id="complaint-email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="complaint-phone">Phone Number</label>
+                        <input type="tel" id="complaint-phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="booking-reference">Booking Reference (if applicable)</label>
+                        <input type="text" id="booking-reference" placeholder="e.g., TE-12345678">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="complaint-date">Date of Incident</label>
+                        <input type="date" id="complaint-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="complaint-category">Complaint Category</label>
+                        <select id="complaint-category" required>
+                            <option value="">Select a category</option>
+                            <option value="delay">Train Delay</option>
+                            <option value="cancellation">Cancellation</option>
+                            <option value="staff">Staff Behavior</option>
+                            <option value="cleanliness">Cleanliness</option>
+                            <option value="facilities">Facilities</option>
+                            <option value="booking">Booking Issues</option>
+                            <option value="refund">Refund Problems</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="complaint-details">Complaint Details</label>
+                    <textarea id="complaint-details" rows="5" required placeholder="Please provide as much detail as possible about the incident..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="complaint-resolution">Desired Resolution</label>
+                    <textarea id="complaint-resolution" rows="3" placeholder="What would you like us to do to resolve this issue?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="complaint-attachments">Attachments (Optional)</label>
+                    <input type="file" id="complaint-attachments" multiple>
+                    <p class="form-hint">You can upload relevant photos or documents (max 5MB each)</p>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span class="checkbox-custom"></span>
+                        I confirm that the information provided is accurate and true
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Complaint</button>
+            </form>
+        </div>
+
+        <div class="complaint-status">
+            <h2>Check Complaint Status</h2>
+            <div class="status-checker">
+                <form class="status-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="complaint-reference">Complaint Reference Number</label>
+                            <input type="text" id="complaint-reference" placeholder="e.g., COMP-12345" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="status-email">Email Address</label>
+                            <input type="email" id="status-email" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Check Status</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="complaint-process">
+            <h2>Our Complaint Handling Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Submission</h3>
+                        <p>Submit your complaint through our online form, by email, or by phone.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Acknowledgment</h3>
+                        <p>Receive a confirmation email with your complaint reference number within 24 hours.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Investigation</h3>
+                        <p>Our team investigates your complaint and gathers all necessary information.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Resolution</h3>
+                        <p>We work to resolve your complaint and determine appropriate action.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Response</h3>
+                        <p>Receive a detailed response with the outcome of your complaint within 14 days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="complaint-faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long will it take to resolve my complaint?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We aim to resolve all complaints within 14 days. Complex cases may take longer, but we'll keep you updated throughout the process.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What compensation can I expect for a delayed train?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Compensation depends on the length of the delay. For delays of 30-60 minutes, you may receive 25% of your fare. For delays over 60 minutes, you may receive 50% of your fare. Delays over 2 hours may qualify for a full refund.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I file a complaint on behalf of someone else?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can file a complaint on behalf of someone else, but we'll need written authorization from that person unless you're their legal guardian or have power of attorney.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if I'm not satisfied with the resolution?</h3>
+                        <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If you're not satisfied with our resolution, you can request an escalation to our Customer Relations Manager. If you're still not satisfied after this step, you can contact the relevant transport regulatory authority.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TrainEase</h3>
+                <p>Making train travel easy and convenient for everyone.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedules</a></li>
+                    <li><a href="booking.html">Book Tickets</a></li>
+                    <li><a href="my-tickets.html">My Tickets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="complaints.html">Complaints</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Train Station Rd, City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@trainease.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TrainEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

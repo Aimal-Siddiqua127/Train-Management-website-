@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainEase - Book Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><i class="fas fa-train"></i> TrainEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedules</a></li>
+                <li><a href="booking.html" class="active">Book Tickets</a></li>
+                <li><a href="my-tickets.html">My Tickets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="complaints.html">Complaints</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Book Your Ticket</h1>
+        <p>Select your journey details and choose your seats</p>
+    </section>
+
+    <section class="booking-process">
+        <div class="booking-steps">
+            <div class="step active">
+                <div class="step-number">1</div>
+                <div class="step-text">Journey Details</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text">Select Seats</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text">Passenger Info</div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-text">Payment</div>
+            </div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-text">Confirmation</div>
+            </div>
+        </div>
+
+        <div class="booking-container">
+            <!-- Step 1: Journey Details -->
+            <div class="booking-step-content active" id="step-1">
+                <h2>Journey Details</h2>
+                <form id="journey-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="journey-from">From</label>
+                            <select id="journey-from" required>
+                                <option value="">Select departure station</option>
+                                <option value="new-york">New York</option>
+                                <option value="boston">Boston</option>
+                                <option value="chicago">Chicago</option>
+                                <option value="detroit">Detroit</option>
+                                <option value="los-angeles">Los Angeles</option>
+                                <option value="san-francisco">San Francisco</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="journey-to">To</label>
+                            <select id="journey-to" required>
+                                <option value="">Select arrival station</option>
+                                <option value="new-york">New York</option>
+                                <option value="boston">Boston</option>
+                                <option value="chicago">Chicago</option>
+                                <option value="detroit">Detroit</option>
+                                <option value="los-angeles">Los Angeles</option>
+                                <option value="san-francisco">San Francisco</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="journey-date">Date</label>
+                            <input type="date" id="journey-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passengers">Passengers</label>
+                            <select id="passengers" required>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="class">Class</label>
+                        <div class="radio-group">
+                            <label class="radio-container">
+                                <input type="radio" name="class" value="economy" checked>
+                                <span class="radio-custom"></span>
+                                Economy
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="class" value="business">
+                                <span class="radio-custom"></span>
+                                Business
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="class" value="first">
+                                <span class="radio-custom"></span>
+                                First Class
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary next-step">Search Trains</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 2: Select Seats -->
+            <div class="booking-step-content" id="step-2">
+                <h2>Select Your Seats</h2>
+                <div class="train-selection">
+                    <div class="selected-train">
+                        <div class="train-header">
+                            <div class="train-name">
+                                <h3>Express 101</h3>
+                                <span class="train-type express">Express</span>
+                            </div>
+                            <div class="train-price">$45</div>
+                        </div>
+                        <div class="train-details">
+                            <div class="train-stations">
+                                <div class="departure">
+                                    <p class="time">08:00 AM</p>
+                                    <p class="station">New York</p>
+                                    <p class="date">May 18, 2025</p>
+                                </div>
+                                <div class="journey-line">
+                                    <span class="duration">4h 30m</span>
+                                </div>
+                                <div class="arrival">
+                                    <p class="time">12:30 PM</p>
+                                    <p class="station">Boston</p>
+                                    <p class="date">May 18, 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="seat-selection">
+                    <div class="seat-map-container">
+                        <div class="seat-map-legend">
+                            <div class="legend-item">
+                                <div class="seat available"></div>
+                                <span>Available</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="seat selected"></div>
+                                <span>Selected</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="seat occupied"></div>
+                                <span>Occupied</span>
+                            </div>
+                        </div>
+
+                        <div class="seat-map">
+                            <div class="train-car">
+                                <h4>Car 1 - Economy</h4>
+                                <div class="seats">
+                                    <div class="seat-row">
+                                        <div class="seat-number">1</div>
+                                        <div class="seat available" data-seat="1A">A</div>
+                                        <div class="seat available" data-seat="1B">B</div>
+                                        <div class="aisle"></div>
+                                        <div class="seat occupied" data-seat="1C">C</div>
+                                        <div class="seat occupied" data-seat="1D">D</div>
+                                    </div>
+                                    <div class="seat-row">
+                                        <div class="seat-number">2</div>
+                                        <div class="seat available" data-seat="2A">A</div>
+                                        <div class="seat available" data-seat="2B">B</div>
+                                        <div class="aisle"></div>
+                                        <div class="seat available" data-seat="2C">C</div>
+                                        <div class="seat available" data-seat="2D">D</div>
+                                    </div>
+                                    <div class="seat-row">
+                                        <div class="seat-number">3</div>
+                                        <div class="seat occupied" data-seat="3A">A</div>
+                                        <div class="seat occupied" data-seat="3B">B</div>
+                                        <div class="aisle"></div>
+                                        <div class="seat available" data-seat="3C">C</div>
+                                        <div class="seat available" data-seat="3D">D</div>
+                                    </div>
+                                    <div class="seat-row">
+                                        <div class="seat-number">4</div>
+                                        <div class="seat available" data-seat="4A">A</div>
+                                        <div class="seat available" data-seat="4B">B</div>
+                                        <div class="aisle"></div>
+                                        <div class="seat occupied" data-seat="4C">C</div>
+                                        <div class="seat occupied" data-seat="4D">D</div>
+                                    </div>
+                                    <div class="seat-row">
+                                        <div class="seat-number">5</div>
+                                        <div class="seat available" data-seat="5A">A</div>
+                                        <div class="seat available" data-seat="5B">B</div>
+                                        <div class="aisle"></div>
+                                        <div class="seat available" data-seat="5C">C</div>
+                                        <div class="seat available" data-seat="5D">D</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="selected-seats-summary">
+                        <h3>Selected Seats</h3>
+                        <div class="selected-seats-list" id="selected-seats">
+                            <p>No seats selected yet</p>
+                        </div>
+                        <div class="seat-price-summary">
+                            <div class="price-item">
+                                <span>Base Price (per seat)</span>
+                                <span>$45.00</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Booking Fee</span>
+                                <span>$5.00</span>
+                            </div>
+                            <div class="price-item total">
+                                <span>Total</span>
+                                <span id="total-price">$50.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="btn btn-primary next-step">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Passenger Information -->
+            <div class="booking-step-content" id="step-3">
+                <h2>Passenger Information</h2>
+                <form id="passenger-form">
+                    <div class="passenger-details">
+                        <h3>Passenger 1</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="id-type">ID Type</label>
+                                <select id="id-type" required>
+                                    <option value="">Select ID Type</option>
+                                    <option value="passport">Passport</option>
+                                    <option value="driver-license">Driver's License</option>
+                                    <option value="national-id">National ID</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="id-number">ID Number</label>
+                                <input type="text" id="id-number" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="special-requests">Special Requests (Optional)</label>
+                        <textarea id="special-requests" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="terms" required>
+                            <span class="checkbox-custom"></span>
+                            I agree to the <a href="#">Terms and Conditions</a>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary prev-step">Back</button>
+                        <button type="button" class="btn btn-primary next-step">Continue to Payment</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 4: Payment -->
+            <div class="booking-step-content" id="step-4">
+                <h2>Payment</h2>
+                <div class="payment-summary">
+                    <h3>Booking Summary</h3>
+                    <div class="summary-details">
+                        <div class="summary-item">
+                            <span>Train</span>
+                            <span>Express 101</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Date</span>
+                            <span>May 18, 2025</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Time</span>
+                            <span>08:00 AM - 12:30 PM</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Route</span>
+                            <span>New York to Boston</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Seats</span>
+                            <span>2A</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Passengers</span>
+                            <span>1</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total Amount</span>
+                            <span>$50.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-methods">
+                    <h3>Payment Method</h3>
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <input type="radio" id="credit-card" name="payment-method" checked>
+                            <label for="credit-card">Credit/Debit Card</label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="paypal" name="payment-method">
+                            <label for="paypal">PayPal</label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="apple-pay" name="payment-method">
+                            <label for="apple-pay">Apple Pay</label>
+                        </div>
+                    </div>
+
+                    <div class="credit-card-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="card-name">Cardholder Name</label>
+                                <input type="text" id="card-name" placeholder="John Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry-date">Expiry Date</label>
+                                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary prev-step">Back</button>
+                    <button type="button" class="btn btn-primary next-step">Complete Payment</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Confirmation -->
+            <div class="booking-step-content" id="step-5">
+                <div class="booking-confirmation">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Booking Confirmed!</h2>
+                    <p>Your ticket has been booked successfully.</p>
+                    <div class="booking-reference">
+                        <p>Booking Reference: <strong>TE-12345678</strong></p>
+                        <p>A confirmation email has been sent to your email address.</p>
+                    </div>
+
+                    <div class="ticket-details">
+                        <h3>Ticket Details</h3>
+                        <div class="ticket-info">
+                            <div class="ticket-item">
+                                <span>Train</span>
+                                <span>Express 101</span>
+                            </div>
+                            <div class="ticket-item">
+                                <span>Date</span>
+                                <span>May 18, 2025</span>
+                            </div>
+                            <div class="ticket-item">
+                                <span>Time</span>
+                                <span>08:00 AM - 12:30 PM</span>
+                            </div>
+                            <div class="ticket-item">
+                                <span>Route</span>
+                                <span>New York to Boston</span>
+                            </div>
+                            <div class="ticket-item">
+                                <span>Seat</span>
+                                <span>2A</span>
+                            </div>
+                            <div class="ticket-item">
+                                <span>Passenger</span>
+                                <span>John Doe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ticket-actions">
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-download"></i> Download Ticket</a>
+                        <a href="#" class="btn btn-secondary"><i class="fas fa-print"></i> Print Ticket</a>
+                        <p class="ticket-note">You can view your ticket anytime in the <a href="my-tickets.html">My Tickets</a> section.</p>
+                    </div>
+
+                    <div class="cancellation-policy">
+                        <h3>Cancellation Policy</h3>
+                        <p>You can cancel or change your ticket within the first hour of booking without any charges. After that, cancellation charges will apply as per our policy.</p>
+                        <p>Current time: <span id="current-time">4:44 PM</span></p>
+                        <p>Cancellation deadline: <span id="cancellation-deadline">5:44 PM</span></p>
+                        <div class="countdown" id="cancellation-countdown">
+                            <span>59:59</span> remaining for free cancellation
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                        <a href="my-tickets.html" class="btn btn-primary">View My Tickets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TrainEase</h3>
+                <p>Making train travel easy and convenient for everyone.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedules</a></li>
+                    <li><a href="booking.html">Book Tickets</a></li>
+                    <li><a href="my-tickets.html">My Tickets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="complaints.html">Complaints</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Train Station Rd, City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@trainease.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TrainEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainEase - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><i class="fas fa-train"></i> TrainEase</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedules</a></li>
+                <li><a href="booking.html">Book Tickets</a></li>
+                <li><a href="my-tickets.html">My Tickets</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="complaints.html">Complaints</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html" class="btn btn-secondary">Login</a>
+            <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team for any inquiries</p>
+    </section>
+
+    <section class="contact-container">
+        <div class="contact-info">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Call Us</h3>
+                <p>Customer Service: (123) 456-7890</p>
+                <p>Booking Assistance: (123) 456-7891</p>
+                <p>Technical Support: (123) 456-7892</p>
+                <p class="availability">Available 24/7</p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>General Inquiries: info@trainease.com</p>
+                <p>Customer Support: support@trainease.com</p>
+                <p>Bookings: bookings@trainease.com</p>
+                <p class="availability">Response within 24 hours</p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Visit Us</h3>
+                <p>123 Train Station Road</p>
+                <p>New York, NY 10001</p>
+                <p>United States</p>
+                <p class="availability">Mon-Fri: 9AM-6PM, Sat: 10AM-4PM</p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>Live Chat</h3>
+                <p>Chat with our customer service representatives in real-time.</p>
+                <button class="btn btn-primary start-chat">Start Chat</button>
+                <p class="availability">Available 24/7</p>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="booking">Booking Inquiry</option>
+                            <option value="cancellation">Cancellation</option>
+                            <option value="refund">Refund Status</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span class="checkbox-custom"></span>
+                        I agree to the <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="staff-directory">
+        <h2>Meet Our Staff</h2>
+        <div class="staff-cards">
+            <div class="staff-card">
+                <div class="staff-image">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Sarah Johnson">
+                </div>
+                <div class="staff-info">
+                    <h3>Sarah Johnson</h3>
+                    <p class="staff-title">Customer Service Manager</p>
+                    <p class="staff-contact"><i class="fas fa-envelope"></i> sarah.j@trainease.com</p>
+                    <p class="staff-contact"><i class="fas fa-phone"></i> (123) 456-7893</p>
+                </div>
+            </div>
+            <div class="staff-card">
+                <div class="staff-image">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Michael Brown">
+                </div>
+                <div class="staff-info">
+                    <h3>Michael Brown</h3>
+                    <p class="staff-title">Booking Department Head</p>
+                    <p class="staff-contact"><i class="fas fa-envelope"></i> michael.b@trainease.com</p>
+                    <p class="staff-contact"><i class="fas fa-phone"></i> (123) 456-7894</p>
+                </div>
+            </div>
+            <div class="staff-card">
+                <div class="staff-image">
+                    <img src="/placeholder.svg?height=150&width=150" alt="Emily Davis">
+                </div>
+                <div class="staff-info">
+                    <h3>Emily Davis</h3>
+                    <p class="staff-title">Technical Support Lead</p>
+                    <p class="staff-contact"><i class="fas fa-envelope"></i> emily.d@trainease.com</p>
+                    <p class="staff-contact"><i class="fas fa-phone"></i> (123) 456-7895</p>
+                </div>
+            </div>
+            <div class="staff-card">
+                <div class="staff-image">
+                    <img src="/placeholder.svg?height=150&width=150" alt="David Wilson">
+                </div>
+                <div class="staff-info">
+                    <h3>David Wilson</h3>
+                    <p class="staff-title">Customer Relations</p>
+                    <p class="staff-contact"><i class="fas fa-envelope"></i> david.w@trainease.com</p>
+                    <p class="staff-contact"><i class="fas fa-phone"></i> (123) 456-7896</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How can I change or cancel my booking?</h3>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>You can change or cancel your booking through the "My Tickets" section of your account. Changes and cancellations made within the first hour of booking are free of charge. After that, fees may apply based on our policy.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is the baggage allowance on trains?</h3>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Each passenger is allowed to bring two pieces of luggage (up to 50 lbs each) and one personal item. Additional or oversized baggage may incur extra charges. Please check specific train information for any variations.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How early should I arrive at the station?</h3>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>We recommend arriving at least 30 minutes before your train's scheduled departure time. This allows sufficient time for check-in, security procedures, and boarding.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Are there discounts available for children or seniors?</h3>
+                    <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer discounted fares for children (ages 2-12) and seniors (65+). Children under 2 travel free when sitting on an adult's lap. Military personnel and students may also be eligible for discounts with valid ID.</p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-more">
+            <a href="faq.html" class="btn btn-secondary">View All FAQs</a>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2>Find Us</h2>
+        <div class="map-container">
+            <div class="map-placeholder">
+                <!-- In a real implementation, this would be replaced with an actual map -->
+                <img src="/placeholder.svg?height=400&width=800" alt="Map location">
+                <div class="map-overlay">
+                    <p>Interactive Map Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TrainEase</h3>
+                <p>Making train travel easy and convenient for everyone.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Schedules</a></li>
+                    <li><a href="booking.html">Book Tickets</a></li>
+                    <li><a href="my-tickets.html">My Tickets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="complaints.html">Complaints</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Train Station Rd, City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@trainease.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TrainEase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
